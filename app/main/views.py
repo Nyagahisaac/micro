@@ -12,6 +12,37 @@ from .forms import UpdateProfile
 # @login_required
 # def new_user(id):
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #.....
 @main.route('/user/<uname>')
 def profile(uname):
