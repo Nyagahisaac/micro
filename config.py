@@ -2,24 +2,12 @@ import os
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class Config:
     '''
     General configuration parent class
     '''
     SECRET_KEY = 'dsk221541461'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2//username:pssword@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2//isaac:2face@localhost/pitch'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
