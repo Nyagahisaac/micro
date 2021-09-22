@@ -20,6 +20,15 @@ class User(UserMixin,db.Model):
     def password(self):
         raise AttributeError('You cannot read the password attribute')
     
+
+
+
+
+
+
+
+
+    
     @property
     def password(self, password):
         self.password_secure = generate_password_hash(password)
