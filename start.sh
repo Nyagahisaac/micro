@@ -1,0 +1,3 @@
+#.....
+export MAIL_USERNAME=<nyagahisaac@gmail.com>
+export MAIL_PASSWORD=<2facebaby>
