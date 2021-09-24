@@ -82,7 +82,6 @@ def new_pitch(uname):
         title="create new pitch"
         return render_template('new_pitch.html',title = title,pitch_form = form,user = user)
 
-
 @main.route('/pitch/<id>')
 @login_required
 def pitch(id):
