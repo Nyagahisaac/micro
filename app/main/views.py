@@ -61,6 +61,11 @@ def update_profile(uname):
 #         db.session.commit()
 #     return redirect(url_for('main.profile',uname=uname))
 
+
+
+
+
+
 @main.route('/pitch/new/<uname>', methods = ['GET','POST'])
 @login_required
 def new_pitch(uname):
