@@ -13,14 +13,6 @@ parser.add_argument("username", type='str', required=True, help="Please input yo
 
 
 
-
-
-
-
-
-
-
-
 @auth.route('/register',methods = ["GET","POST"])
 def register():
     form = RegistrationForm()
@@ -46,7 +38,7 @@ def login():
             
         flash('Invalid username or Password')
           
-    title = "Pitch login" 
+    title = "~Pitch App~" 
     return render_template('auth/login.html',login_form = login_form,title=title)
     
 @auth.route('/logout')
