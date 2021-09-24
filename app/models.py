@@ -64,6 +64,10 @@ class Pitch(db.Model):
 
         return pitches
 
+
+
+
+
     @classmethod
     def get_pitch_category(cls,categoryName):
         pitch_cat_list = Pitch.query.filter_by(category = categoryName)
