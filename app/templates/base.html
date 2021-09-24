@@ -1,0 +1,29 @@
+{% extends 'bootstrap/base.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav>
+                <ul>
+                    {% if current_user.is_authenticated %}
+
+                    <li><a href="{{url_for('main.profile,uname = current_user.username')}}"></a>Profile:</li>
+                    <li><a href="{{ur_for('auth.logout')}}">Sign out</a></li>
+                    {% else %}
+                    <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -19,26 +19,17 @@ db = SQLAlchemy()
 mail = Mail()
 photos = UploadSet('photos',IMAGES)
 
-
-
-
-
-
-
-
-
-
-
-
 def create_app(config_name):
     app = Flask(__name__)
     
-    app.config["SQLALCHEMY_DATABASE_URI"]  = "sqlite:///example.sqlite"
+    app.config["SQLALCHEMY_DATABASE_URI"]  = "sqlite:////test11.db"
     
     app.config.from_object(config_options [config_name])
     
     bootstrap.init_app(app)
     db.init_app(app)
+    # db.create_all()
+    # db.session.commit()
     login_manager.init_app(app)
     mail.init_app(app)
      
