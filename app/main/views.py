@@ -31,12 +31,6 @@ def profile(uname):
     return render_template("profile/profile.html", user = user)
 
 
-
-
-
-
-
-
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
 def update_profile(uname):
