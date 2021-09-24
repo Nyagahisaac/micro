@@ -11,6 +11,31 @@ from flask_restful.reqparse import RequestParser
 parser = RequestParser()
 parser.add_argument("username", type='str', required=True, help="Please input your username ")
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @auth.route('/register',methods = ["GET","POST"])
 def register():
     form = RegistrationForm()
