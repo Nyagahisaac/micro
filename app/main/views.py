@@ -105,8 +105,6 @@ def update_pic(uname):
     return redirect(url_for('main.profile',uname = uname))        
 
 
-
-
 @main.route('/pitch/comment/new/<int:id>', methods = ['GET','POST'])
 @login_required
 def new_comment(id):
