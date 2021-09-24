@@ -63,9 +63,6 @@ def update_profile(uname):
 
 
 
-
-
-
 @main.route('/pitch/new/<uname>', methods = ['GET','POST'])
 @login_required
 def new_pitch(uname):
