@@ -21,21 +21,6 @@ parser.add_argument("username", type='str', required=True, help="Please input yo
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @auth.route('/register',methods = ["GET","POST"])
 def register():
     form = RegistrationForm()
