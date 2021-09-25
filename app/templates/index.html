@@ -18,11 +18,30 @@
     nav {
         display: flex;
         justify-content: space-between;
-        background-color: rgb(4, 4, 54)transparent ;
+        background-color: rgb(4, 4, 54)transparent;
     }
 
     ul {
         padding-left: 20px;
+    }
+
+    .test {
+        display: flex;
+        justify-content: space-between;
+        height: 1px;
+        background-color: yellow;
+    }
+
+    li {
+        justify-content: space-between;
+        display: inline-block;
+        padding: 10px;
+    }
+
+
+
+    .testcard {
+        box-shadow: 2px 2px 15px 2px rgb(17, 16, 16);
     }
 </style>
 
@@ -36,29 +55,40 @@
                 </a>
 
             </div>
-            
+
             <div class="btn">
-                <a href="{{url_for('auth.login')}}">
-                    <button class="btn btn-primary float-left"
-                    style="border-radius: 10px;font-weight: bold;">Sign Out</button>
+                <a href="{{url_for('auth.logout')}}">
+                    <button class="btn btn-primary float-left" style="border-radius: 10px;font-weight: bold;">Sign
+                        Out</button>
                 </a>
-                
+
             </div>
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container text">
         <div class="row">
             <div class="col-md-3 ">
-
-            </div>
-            <div class="col-md-9">
-                <div class="">
-
+                <div class="sidebar">
+                    <nav class="test">
+                        <!-- <a href="#">...</a> -->
+                        <ul class="trial">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pitch.html">Pitch</a></li>
+                            <li><a href="new_pitch.html">Pitches</a></li>
+                        </ul>
+                    </nav>
+                    <hr>
                 </div>
+            </div>
+
+
+            <div class="col-md-9">
 
             </div>
+
         </div>
+    </div>
     </div>
 
 </body>

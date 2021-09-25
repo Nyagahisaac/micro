@@ -1,21 +1,14 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf%}
-
-{% block navbar %}
-        {% include 'navbar.html' %}
-{% endblock %}  
-
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" type='text/css' href="{{url_for('static',filename = 'css/newPitch.css')}}">
 {% endblock styles %}
-
 {% block content%}
-    <body>
-    <div class="container">
-        <h2> Create new Pitch.</h2>
 
-            {{wtf.quick_form(pitch_form)}}
-    </div>
-    </body>
+<div class="container">
+    <h2>write your comment</h2>
+    <p>pitch title: {{pitch.pitch_title}}</p>
+    {{wtf.quick_form(comment_form)}}
+</div>
 {% endblock%}

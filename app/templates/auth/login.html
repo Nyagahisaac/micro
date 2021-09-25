@@ -5,31 +5,52 @@
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/app/static/style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 {% endblock styles %}
 
 
 {% block content %}
-<div class="container"> 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap');
+
+
+body{
+  background-image:url(https://i.pinimg.com/474x/b8/0e/7f/b80e7f7e086b97a7fcf9db64fe49e9b1.jpg) ;
+  background-repeat: no-repeat;
+  width: 100% 100% !important;
+  background-size: cover;
+  background-color: transparent;
+}
+.login{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+}
+</style>
+<body>
+  
+
+<div class="container login "> 
     <div class="row">
       <div class= "col-md-2"> </div>
-      <div class="col-md-8" style="margin-top: 100px">
-        <center><h1 style="color:silver; font-size:90px;"><b>Login</b></h1></center>
+      <div class="col-md-8 "  style="margin-top: 100px">
+        <center><h1 style="color:silver; font-size:90px;"><b>~ Login ~</b></h1></center>
       <!--Flash message --> 
       {% for message in get_flashed_messages() %}
         <div class="alert alert-danger">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <button type="button" class="close  btn btn-primary" style="font-size:18px;" data-dismiss="alert">&times;</button>
         {{ message }}
         </div>
       {% endfor %}
       <!-- Login form -->
       {{wtf.quick_form(login_form)}}
-      <p> Don't have an account?<button class="btn btn-primary"><a href="{{url_for('auth.register')}}"><b style="color:white;font-weight: bold;">Sign up here</b></button> </a></p>
+      <p> Don't have an account?<button class="btn btn-primary"><a href="{{url_for('auth.register')}}"><b style="color:white;font-weight: bold;font-size: 15px;border-radius: 20px;">Sign up here</b></button> </a></p>
      </div>
      <div clas="col-md-2"> </div>
     </div>
 </div>
-
+</body>
 {% endblock%}

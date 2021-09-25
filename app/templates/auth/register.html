@@ -2,11 +2,27 @@
 {% import 'bootstrap/wtf.html' as wtf%}
 
 {% block content %}
+<body>
 <div class="container">
+    <style>
+        .register{
+        color: blue;
+        font-size: 20px;
+        margin-bottom: 100px;
+
+        }
+        body{
+        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.setaswall.com%2Fwp-content%2Fuploads%2F2017%2F07%2FBlack-Wallpapers-14-1440-x-900.png&f=1&nofb=1);
+
+        }
+
+
+    </style>
     <div class="row">
         <div class="col-md-2"> </div>
-        <div class="col-md-8">
+        <div class="col-md-8 card register mb-5 ">
             <p style="margin-bottom: 70px;">
+                <h1></h1>
 
                 {{wtf.quick_form(registration_form)}}
             </p>
@@ -15,7 +31,10 @@
 
         </div>
         <div class="col-md-2"></div>
+    
     </div>
 </div>
 
+    
+</body>
 {% endblock%}

@@ -1,7 +1,7 @@
 from .import db, login_manager
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash,check_password_hash
-
+from  datetime import datetime
 
 class User(UserMixin,db.Model):
     __tablename__= 'users'
@@ -42,9 +42,19 @@ class Comment(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(255))
     comment = db.Column(db.String(255))
-    
-    def __repr__(self):
-        return f'Comment{self.name}'
+    user = db.Column(db.String(255))
+
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_pitch_comment(cls,id):
+        comment = Comment.query.filter_by(pitch_id = id)
+
+        return comment
+    # def __repr__(self):
+    #     return f'Comment{self.name}'
     
 class Pitch(db.Model):
     __tablename___ = 'pitches'
@@ -53,7 +63,8 @@ class Pitch(db.Model):
     name = db.Column(db.String(255))
     pitch = db.Column(db.String(255))
     author = db.Column(db.String(255))
-    # users = db.relationship('User',backref = 'comment',lazy='dynamic')
+    category = db.Column(db.String(255))
+    user = db.Column(db.String(255))
     
     def save_pitch(self):
         db.session.add(self)
@@ -76,8 +87,8 @@ class Pitch(db.Model):
 
         return pitch_list
     
-    def __repr__(self):
-        return f'Pitch{self.name}'
+    # def __repr__(self):
+    #     return f'Pitch{self.name}'
 
 class Downvote(db.Model):
     __tablename__ = 'downvotes'

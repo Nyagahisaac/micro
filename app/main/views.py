@@ -2,7 +2,7 @@ from ..models import User,Comment,Pitch
 from . import main
 from .. import db,photos
 from flask import render_template,request,redirect,url_for,abort
-from .forms import UpdateProfile
+from .forms import UpdateProfile,NewPitch,CommentForm
 from flask_login import login_required,current_user
 
 
@@ -18,6 +18,10 @@ def index():
     title = "Pitch App"
     
     pitches = Pitch.get_all_pitch()
+    # business = Pitch.get_pitch_category("Business")
+    # twitter = Pitch.get_pitch_category("Twitter")
+    # education = Pitch.get_pitch_category("Educational")
+    # motivational = Pitch.get_pitch_category("Motivational")
     
     return render_template('index.html', title = title)
 
@@ -117,3 +121,5 @@ def new_comment(id):
 
         new_comment.save_comment()
         return redirect(url_for('.pitch',id = pitch.id))
+    title = f'{pitch.pitch_title} comment'
+    return render_template('comment.html',title = title, comment_form = form,pitch = pitch)
