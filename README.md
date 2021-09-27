@@ -23,7 +23,7 @@ Clone this repository and navigate to the folder. Run the following commands to 
   *  source virtual/bin/activate
   *  pip install -r requirements.txt
 
-Dependencies
+## Dependencies
 
     alembic==0.9.9
     blinker==1.4
@@ -75,7 +75,8 @@ Dependencies
 No known bugs so far
 Support Details
 
-Contact me for further help
+# Contact me for further help
+* Nyagahisaac21@gmail.com 
 # About
 
 PitchApp is a python based web app that allows users to submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them. The pitches are organized by category. A user can have different categories like pickup lines, interview pitch , product pitch, promotion pitch.
@@ -86,6 +87,8 @@ Resources
 Readme
 Releases
 No releases published
+
+# copyright @ izooh 2021
 Packages
 No packages published
 # Languages
